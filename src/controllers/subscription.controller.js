@@ -130,10 +130,13 @@ const getSubscribedChannels = asyncHandler(async (req, res) => {
     },
   ]);
 
-  return res.status(200).json(
-    new ApiResponse(200,subscribedChannels,"Channels fetched Succesfully")
-  )
-
+  return res
+    .status(200)
+    .json(
+      new ApiResponse(200, subscribedChannels, "Channels fetched Succesfully")
+    );
 });
 
-export { toggleSubscription, getUserChannelSubscribers, getSubscribedChannels };
+export { toggleSubscription,
+   getUserChannelSubscribers,
+    getSubscribedChannels };
